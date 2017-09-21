@@ -1,1 +1,395 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 14px;
+    text-decoration: none;
+    color: #000 !important;
+
+}
+
+:focus {
+    outline: none;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto
+}
+
+a:hover {
+    text-decoration: none
+}
+
+.first-fold {
+    display: inline-block;
+}
+
+#navigation {
+    padding: 20px 0;
+    background: #fff
+}
+
+#navigation ul {
+    padding: 0px;
+    margin: 0px
+}
+
+#navigation ul li {
+    list-style: none;
+    float: left;
+    position: relative;
+}
+
+#navigation ul li ul {
+    display: none;
+    position: absolute;
+    width: 189px;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    background: #efefef;
+    color: #fff;
+    border: 1px solid #ccc;
+}
+
+#navigation ul li:hover ul {
+    display: block
+}
+
+.btn_project:hover {
+    color: #fff !important
+}
+
+#navigation ul li {
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 25px;
+    padding: 14px 25px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#logo {
+    font-size: 25px;
+    font-weight: 700;
+    color: #000;
+    margin: 10px 0;
+    text-decoration: underline;
+}
+
+#logo img {
+    margin-right: 10px
+}
+
+.btn_project {
+    background: #ec4a1d;
+    color: #fff !important;
+    border-radius: 50px;
+    padding: 10px 26px !important;
+    box-shadow: 0px 2px 13px -2px rgba(0, 0, 0, 0.58);
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 14px;
+    text-decoration: none;
+
+}
+
+:focus {
+    outline: none;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto
+}
+
+a:hover {
+    text-decoration: none
+}
+
+.first-fold {
+    display: inline-block;
+}
+
+#navigation {
+    padding: 20px 0;
+    background: #fff;
+    z-index: 9;
+}
+
+#navigation ul {
+    padding: 0px;
+    margin: 0px
+}
+
+.navbar1 {
+    position: fixed;
+    width: 100%;
+    box-shadow: 4px 3px 6px 1px rgba(0, 0, 0, 0.32);
+    background: rgba(255, 255, 255, 0.95) !important;
+}
+
+#navigation ul li {
+    list-style: none;
+    float: left
+}
+
+#navigation ul li:hover, .active {
+    color: #ec4a1d;
+}
+
+.active {
+    color: #ec4a1d !important;
+}
+
+.btn_project:hover {
+    color: #fff !important
+}
+
+#navigation ul li {
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 25px;
+    padding: 14px 25px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#logo {
+    font-size: 25px;
+    font-weight: 700;
+    color: #000;
+    margin: 10px 0
+}
+
+#logo img {
+    margin-right: 10px
+}
+
+.btn_project {
+    background: #ec4a1d;
+    color: #fff !important;
+    border-radius: 50px;
+    padding: 10px 26px !important;
+    box-shadow: 0px 2px 13px -2px rgba(0, 0, 0, 0.58);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background: #000;
+    height: 5px;
+    width: 26px;
+    display: block;
+    margin: 3px 0;
+}
+
+/********************** css popup  ***********************/
+
+.box {
+    width: 40%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+}
+
+.button {
+    font-size: 1em;
+    padding: 10px;
+    color: #fff;
+    border: 2px solid #06D85F;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.button:hover {
+    background: #06D85F;
+}
+
+/********************** inputy style   ***********************/
+.group {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+input {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #757575;
+    font-weight: 200;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* LABEL ======================================= */
+label {
+    color: #999;
+    font-size: 18px;
+    font-weight: 300 !important;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label {
+    top: -15px;
+    font-size: 14px;
+    color: #5264AE;
+}
+
+/* BOTTOM BARS ================================= */
+.bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.bar:before, .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #5264AE;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 15%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+/********************** inputy style   ***********************/
+@media only screen and (max-width: 700px) {
+    #navigation ul li ul {
+        display: none
+    }
+
+    #navigation ul {
+        display: none;
+        z-index: 9999;
+    }
+
+    .mobileMenu ul {
+        display: block !important;
+        background: #fff;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        top: 70px;
+        right: 0;
+        box-shadow: 1px 3px 3px 2px #000;
+        z-index: 999;
+        padding: 37px !important;
+    }
+
+    .mobileMenu ul li:hover {
+        background: #ec4a1d;
+        border-color: #ec4a1d;
+        color: #fff !important
+    }
+
+    .mobileMenu ul li {
+        float: none !important;
+        width: 100%;
+        border: 1px solid #ccc;
+        margin: 3px 0;
+        padding: 10px !important;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 26px;
+        top: 31px;
+    }
+
+    .btn_project {
+        max-resolution: 30px 0 !important;
+    }
+}

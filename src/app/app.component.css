@@ -1,0 +1,21 @@
+
+footer {
+    background: #000;
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer ul li {
+    list-style: none;
+    float: left;
+    margin: 24px 30px;
+    text-transform: unset;
+}
+
+footer ul {
+    float: left;
+    padding: 0;
+    width: 33%;
+}
+footer #logo{ color: #fff; text-decoration: none; padding: 0}
+footer #logo img{ display: block;margin: auto}
