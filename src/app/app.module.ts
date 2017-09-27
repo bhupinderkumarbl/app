@@ -7,6 +7,7 @@ import {Routes, RouterModule} from '@angular/router';
 import {notFound} from './404/404';
 import {ArshareModule} from './includes/ar-share.module';
 import {ContactComponent} from './contact/contact.component';
+import {AdminComponent} from './admin/admin.component';
 import {FormsModule, ReactiveFormsModule}   from '@angular/forms';
 import {PopUpService} from './app.service';
 
@@ -17,6 +18,8 @@ const routes: Routes = [
 
     {
         path: 'contact', component: ContactComponent,},
+    {
+        path: 'admin', component: AdminComponent,},
     {
         path: 'about', component: AboutComponent,
         children: [
@@ -33,6 +36,7 @@ const routes: Routes = [
         HomeComponent,
         AboutComponent,
         ContactComponent,
+        AdminComponent,
         notFound,
 
 

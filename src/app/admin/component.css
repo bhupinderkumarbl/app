@@ -1,0 +1,8 @@
+form{
+    width:600px; margin: 100px auto;
+    border:1px solid #ccc;
+    padding: 50px
+}
+input{
+    margin: 20px 0;
+}

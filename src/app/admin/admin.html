@@ -1,0 +1,18 @@
+<div class="container">
+    <form #form="ngForm" novalidate (ngSubmit)="onSubmit(formData)">
+        <div class="form-group">
+            <!--<label for="name">Name</label>-->
+            <input #firstName minlength="5" type="text" required class="form-control" [(ngModel)]="form.firstName"
+                   name="firstName" placeholder="Enter name "/>
+            <div *ngIf="firstName.ng-invalid" class="danger">First name is required</div>
+        </div>
+        <div class="form-group">
+            <!--<label for="name">Name</label>-->
+            <input #password minlength="5" type="password" required class="form-control" [(ngModel)]="form.password"
+                   name="password" placeholder="Enter password "/>
+            <div *ngIf="firstName.ng-invalid" class="danger">First name is required</div>
+        </div>
+        <button [disabled]="form.invalid" type="submit" class="btn btn-success">Submit</button>
+    </form>
+
+</div>
