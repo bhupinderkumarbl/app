@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {PopUpService} from './popupService';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -6,13 +7,20 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent  {
+  constructor(private closeDialoge: PopUpService){
+    this.closeDialoge.closePopUp.subscribe((canClose) => {
+      if(canClose) {
+        this.showPopUp = !canClose;
+      }
+    });
+  }
   showPopUp:boolean;
 
   showMenu(){
     document.getElementById("navigation").classList.toggle('mobileMenu');
   }
   showForm(){
-    this.showPopUp =!this.showPopUp
+    this.showPopUp = true;
   }
 
 

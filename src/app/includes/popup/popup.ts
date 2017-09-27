@@ -3,20 +3,18 @@
  */
 
 import {Component} from '@angular/core';
+import {PopUpService} from '../../popupService';
 @Component({
     selector:'popup',
     templateUrl:'popup.html',
     styleUrls:['popup.css']
 
 })
-
 export class popupComponent{
-    showPopUp:boolean;
-
-    closeDialog(){
-        alert('dfdf');
-
-
+    constructor(private closeDialoge: PopUpService){
+    }
+    closeDialog() {
+    this.closeDialoge.closePopUp.next(true);
     }
 
 }

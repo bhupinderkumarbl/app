@@ -2,22 +2,19 @@
  * Created by bk on 9/21/2017.
  */
 import {Component} from '@angular/core';
-import {appService} from '../popupService';
+import {PopUpService} from '../popupService';
 // import Typed from 'typed.js';
 
 @Component({
     selector: 'home-app',
     templateUrl: 'home.component.html',
     styleUrls: ['home.component.css'],
-    providers: [appService]
+    providers: [PopUpService]
 })
 export class HomeComponent {
     value: string = "";
-    constructor(private fg: appService) { }
+    constructor(private fg: PopUpService) { }
 
-    ngOnInit(): void {
-        this.value = this.fg.getApp();
-    }
 
 
 

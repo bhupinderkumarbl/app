@@ -8,6 +8,7 @@ import {notFound} from './404/404';
 import {ArshareModule} from './includes/ar-share.module';
 import {ContactComponent} from './contact/contact.component';
 import {FormsModule, ReactiveFormsModule}   from '@angular/forms';
+import {PopUpService} from './popupService';
 
 
 
@@ -43,7 +44,7 @@ const routes: Routes = [
         ArshareModule,
         FormsModule
     ],
-    providers: [],
+    providers: [PopUpService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
