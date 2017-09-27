@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {PopUpService} from './popupService';
+import {PopUpService} from './app.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

@@ -2,7 +2,7 @@
  * Created by bk on 9/21/2017.
  */
 import {Component} from '@angular/core';
-import {PopUpService} from '../popupService';
+import {PopUpService} from '../app.service';
 // import Typed from 'typed.js';
 
 @Component({

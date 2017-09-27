@@ -3,7 +3,7 @@
  */
 
 import {Component} from '@angular/core';
-import {PopUpService} from '../../popupService';
+import {PopUpService} from '../../app.service';
 @Component({
     selector:'popup',
     templateUrl:'popup.html',
