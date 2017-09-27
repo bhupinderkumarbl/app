@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>Hero Form</h1>
+    <form #form="ngForm" novalidate>
+        <div class="form-group">
+            <!--<label for="name">Name</label>-->
+            <input #firstName minlength="5"  type="text" required class="form-control" [(ngModel)]="form.firstName" name="firstName"/>
+            <div *ngIf="firstName.ng-invalid" class="danger">First name is required</div>
+        </div>
+        <select class="form-class">
+            <option *ngFor="let lang of languages">{{lang}}</option>
+        </select>
+
+        <button [disabled]="form.invalid" type="submit" class="btn btn-success">Submit</button>
+    </form>
+    <h3>classes</h3>
+    <h4>{{firstName.className}}</h4>
+
+</div>

@@ -5,11 +5,17 @@ import {HomeComponent} from './home-page/home.component';
 import {AboutComponent} from './about/about.component';
 import {Routes, RouterModule} from '@angular/router';
 import {notFound} from './404/404';
+import {ArshareModule} from './includes/ar-share.module';
+import {ContactComponent} from './contact/contact.component';
+import {FormsModule, ReactiveFormsModule}   from '@angular/forms';
+
 
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
 
+    {
+        path: 'contact', component: ContactComponent,},
     {
         path: 'about', component: AboutComponent,
         children: [
@@ -25,12 +31,17 @@ const routes: Routes = [
         AppComponent,
         HomeComponent,
         AboutComponent,
-        notFound
+        ContactComponent,
+        notFound,
+
 
     ],
     imports: [
         BrowserModule,
+        ReactiveFormsModule,
         RouterModule.forRoot(routes),
+        ArshareModule,
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

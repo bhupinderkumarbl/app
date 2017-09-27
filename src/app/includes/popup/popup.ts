@@ -11,9 +11,12 @@ import {Component} from '@angular/core';
 })
 
 export class popupComponent{
+    showPopUp:boolean;
 
-    showForm(){
-        alert()
-        document.getElementById("popup1").classList.toggle('overlayvisible');
+    closeDialog(){
+        alert('dfdf');
+
+
     }
+
 }

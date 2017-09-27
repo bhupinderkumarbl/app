@@ -6,7 +6,7 @@
     </div>
     <div class="flex-item container">
         <a id="logo">
-            <!--<img src="../app/images/logo-icon.jpg">-->
+            <img src="../images/logo-icon.jpg"/>
             Swiss
             services</a>
         <ul class="pull-right">
@@ -17,13 +17,15 @@
                 </ul>
             </li>
             <li><a routerLink="/about" routerLinkActive="active">Works</a>
-            <li><a routerLink="/about" routerLinkActive="active">Contact</a>
+            <li><a routerLink="/about" routerLinkActive="active">Blog</a>
+            <li><a routerLink="/contact" routerLinkActive="active">admin</a>
             <li class="btn btn_project" (click)="showForm()">Start a Project</li>
 
         </ul>
     </div>
 </div>
 <router-outlet></router-outlet>
+<popup *ngIf="showPopUp"></popup>
 <footer>
     <div class="container">
         <ul>
