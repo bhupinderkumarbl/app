@@ -7,7 +7,9 @@ import {PopUpService} from './app.service';
 })
 
 export class AppComponent  {
+  dataa;
   constructor(private closeDialoge: PopUpService){
+    closeDialoge.getPosts().subscribe((bhupi) => this.dataa = bhupi);
     this.closeDialoge.closePopUp.subscribe((canClose) => {
       if(canClose) {
         this.showPopUp = !canClose;
@@ -15,17 +17,13 @@ export class AppComponent  {
     });
   }
   showPopUp:boolean;
-
   showMenu(){
     document.getElementById("navigation").classList.toggle('mobileMenu');
   }
   showForm(){
     this.showPopUp = true;
   }
-
-
 }
-
 window.onscroll = function() {
   // console.log(window.pageYOffset);
   var nav = document.getElementById('navigation');

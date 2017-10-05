@@ -10,6 +10,8 @@ import {ContactComponent} from './contact/contact.component';
 import {AdminComponent} from './admin/admin.component';
 import {FormsModule, ReactiveFormsModule}   from '@angular/forms';
 import {PopUpService} from './app.service';
+import {HttpModule} from '@angular/http';
+
 
 
 
@@ -40,13 +42,16 @@ const routes: Routes = [
         notFound,
 
 
+
     ],
     imports: [
         BrowserModule,
         ReactiveFormsModule,
         RouterModule.forRoot(routes),
         ArshareModule,
-        FormsModule
+        FormsModule,
+        ReactiveFormsModule,
+        HttpModule
     ],
     providers: [PopUpService],
     bootstrap: [AppComponent]

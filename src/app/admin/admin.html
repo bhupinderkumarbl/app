@@ -1,18 +1,32 @@
 <div class="container">
-    <form #form="ngForm" novalidate (ngSubmit)="onSubmit(formData)">
-        <div class="form-group">
-            <!--<label for="name">Name</label>-->
-            <input #firstName minlength="5" type="text" required class="form-control" [(ngModel)]="form.firstName"
-                   name="firstName" placeholder="Enter name "/>
-            <div *ngIf="firstName.ng-invalid" class="danger">First name is required</div>
+    <div class="col-md-offset-3 col-md-6" *ngIf="user">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div>
+                    <button type="button" class="btn btn-default" (click)="goBack()">Back</button>
+                </div>
+            </div>
+            <div class="panel-body">
+                <form name="UpdateUserForm">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input readonly [(ngModel)]="user.firstName" name="firstName" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input readonly [(ngModel)]="user.lastName" name="lastName" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="emailAddress">Email Address</label>
+                        <input readonly id="emailAddress" [(ngModel)]="user.email" name="email" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="mobileNumber">Mobile Number</label>
+                        <input readonly id="mobileNumber" [(ngModel)]="user.mobileNumber" name="mobile" type="text" class="form-control">
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="form-group">
-            <!--<label for="name">Name</label>-->
-            <input #password minlength="5" type="password" required class="form-control" [(ngModel)]="form.password"
-                   name="password" placeholder="Enter password "/>
-            <div *ngIf="firstName.ng-invalid" class="danger">First name is required</div>
-        </div>
-        <button [disabled]="form.invalid" type="submit" class="btn btn-success">Submit</button>
-    </form>
+    </div>
 
 </div>
